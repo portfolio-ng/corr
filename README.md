@@ -3,8 +3,7 @@
 Meta processing of source files utilising language specific ASTs.
 Powerful analytics tracking variable changes and subordinate function calls.
 
-#### Toplevel functions are functions that are declared independantly in
-global space as it stands corr only really cares about toplevel functions.
+Toplevel functions are functions that are declared independantly in global space as it stands corr only really cares about toplevel functions.
 
 ### Implemented ASTs
 #### js
@@ -190,9 +189,9 @@ function fzbz(fizz,buzz,stop) {
 
 #### Meta Schema
 * fobj["funcname"]="" : function name, invocation string
-* fobj["tcnt"]=0      : ["parsed"][1]["body"][toplevel index number
-* fobj["ptyp"]=""     : ["parsed"][0][ptyp string
-* fobj["pcnt"]=0      : ["parsed"][0][ptyp][index number
+* fobj["tcnt"]=0      : \["parsed"\]\[1\]\["body"\]\[toplevel index number
+* fobj["ptyp"]=""     : \["parsed"\]\[0\]\[ptyp string
+* fobj["pcnt"]=0      : \["parsed"\]\[0\]\[ptyp\]\[index number
 * fobj["funcnum"]=0   : tested[toplevel function index number
 * fobj["thewhy"]=""   : explanation of what the function does
 * fobj["lines"]=[]    : raw source of function split into array of individual lines
@@ -201,22 +200,22 @@ function fzbz(fizz,buzz,stop) {
 * fobj["header"]=""   : raw source function header
 * fobj["footer"]=""   : raw source function footer
 * fobj["vars"]={}     : variables used in the function
-* fobj["vars"]["pass"]=[{}, ..]    : variables passed to the function, function f(ae) {}
-*                      [{
+* fobj["vars"]["pass"]=[{}, ..\]    : variables passed to the function, function f(ae) {}
+*                      \[\{
 *                        ANY : pass variables are stored as they appear in the source: f(ae,ea){} ]["pass]["ae","ea"]
-*                      }, .. ]
+*                      \}, .. \]
 * fobj["vars"]["asgn"]=[]           : variables assigned  ae=ae+17
 * fobj["vars"]["pmut"]=[{}, ..]     : variables possibly mutated, reassignment of passed variables
-*                      [{
+*                       [{
 *                        "name":""  : name of variable
 *                        "val" :ANY : variable value
 *                      }, .. ]
-* fobj["vars"]["decl"]=[{}, ..]     : variables declared, var ae=17
-*                      [{
+* fobj["vars"]["decl"]=[{}, ..\]     : variables declared, var ae=17
+*                      \[\{
 *                        "kind":""  : type of declaration var,let,et al
 *                        "name":""  : name of variable
 *                        "val" :ANY : variable value
-*                      }, .. ]
+*                      \}, .. \]
 * fobj["vars"]["retd"]=[]    : variables returned from the function, return ae
 * fobj["call"]={}            : executed code within function: calls and constructs; new'call'function expressions
 * fobj["call"]["user"]=[]    : user defined functions
