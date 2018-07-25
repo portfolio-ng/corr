@@ -201,21 +201,21 @@ function fzbz(fizz,buzz,stop) {
 * fobj["footer"]=""   : raw source function footer
 * fobj["vars"]={}     : variables used in the function
 * fobj["vars"]["pass"]=[{}, ..\]    : variables passed to the function, function f(ae) {}
-*                      \[\{
-*                        ANY : pass variables are stored as they appear in the source: f(ae,ea){} ]["pass]["ae","ea"]
-*                      \}, .. \]
+  * \[\{
+  * ANY : pass variables are stored as they appear in the source: f(ae,ea){} ]["pass]["ae","ea"]
+  * \}, .. \]
 * fobj["vars"]["asgn"]=[]           : variables assigned  ae=ae+17
 * fobj["vars"]["pmut"]=[{}, ..]     : variables possibly mutated, reassignment of passed variables
-*                       [{
-*                        "name":""  : name of variable
-*                        "val" :ANY : variable value
-*                      }, .. ]
+  * [{
+  * "name":""  : name of variable
+  * "val" :ANY : variable value
+  * }, .. ]
 * fobj["vars"]["decl"]=[{}, ..\]     : variables declared, var ae=17
-*                      \[\{
-*                        "kind":""  : type of declaration var,let,et al
-*                        "name":""  : name of variable
-*                        "val" :ANY : variable value
-*                      \}, .. \]
+  * \[\{
+  * "kind":""  : type of declaration var,let,et al
+  * "name":""  : name of variable
+  * "val" :ANY : variable value
+  * \}, .. \]
 * fobj["vars"]["retd"]=[]    : variables returned from the function, return ae
 * fobj["call"]={}            : executed code within function: calls and constructs; new'call'function expressions
 * fobj["call"]["user"]=[]    : user defined functions
