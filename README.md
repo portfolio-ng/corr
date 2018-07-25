@@ -3,7 +3,7 @@
 Meta processing of source files utilising language specific ASTs.
 Powerful analytics tracking variable changes and subordinate function calls.
 
-Toplevel functions are functions that are declared independantly in global space as it stands corr only really cares about toplevel functions.
+Toplevel functions are functions that are declared independantly in global space; currently corr only focuses on toplevel functions.
 
 ### Implemented ASTs
 #### js
@@ -187,7 +187,7 @@ function fzbz(fizz,buzz,stop) {
 
 ```
 
-#### Meta Schema
+#### Meta Schema Description
 * fobj["funcname"]="" : function name, invocation string
 * fobj["tcnt"]=0      : \["parsed"\]\[1\]\["body"\]\[toplevel index number
 * fobj["ptyp"]=""     : \["parsed"\]\[0\]\[ptyp string
